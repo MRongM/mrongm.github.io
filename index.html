@@ -7,4 +7,9 @@
 <body>
 HELLO WORLD
 </body>
+<script>
+    fetch(new Request("https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("origin==>>",y)})
+    fetch(new Request("https://corsproxy.io/?https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("corsproxy==>>",y)})
+</script>
+
 </html>
