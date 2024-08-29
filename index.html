@@ -14,11 +14,10 @@ HELLO WORLD
         let corsproxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url)
         console.log("corsproxyUrl==>>>", corsproxyUrl)
         const response = await fetch(corsproxyUrl)
-        const result = await response.json()
-        console.log("result==>>>", result)
+        const result = await response.text()
+        console.log("translateViaGoogleApi result==>>>", result)
     }
     translateViaGoogleApi()
-    fetch(new Request("https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("origin==>>",y)})
     fetch(new Request("https://corsproxy.io/?https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("corsproxy==>>",y)})
 </script>
 
