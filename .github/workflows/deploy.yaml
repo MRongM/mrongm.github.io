@@ -1,0 +1,61 @@
+name: NodeJS Build And Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        npm run build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
+        BRANCH: gh-pages
+
+#    - name: Upload artifact
+#      uses: actions/upload-pages-artifact@v2
+#
+#  # Deployment job
+#  deploy:
+#    permissions:
+#      contents: read
+#      pages: write
+#      id-token: write
+#    environment:
+#      name: github-pages
+#      url: ${{steps.deployment.outputs.page_url}}
+#    runs-on: ubuntu-latest
+#    needs: build
+#    steps:
+#      - name: Upload artifact
+#        uses: actions/upload-pages-artifact@v3
+#        with:
+#          path: './dist'
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2
