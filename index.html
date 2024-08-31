@@ -8,7 +8,16 @@
 HELLO WORLD
 </body>
 <script>
-    fetch(new Request("https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("origin==>>",y)})
+    async function translateViaGoogleApi() {
+        const params = new URLSearchParams()
+        const url = `https://demo.1778064.xyz/`
+        let corsproxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url)
+        console.log("corsproxyUrl==>>>", corsproxyUrl)
+        const response = await fetch(corsproxyUrl)
+        const result = await response.text()
+        console.log("translateViaGoogleApi result==>>>", result)
+    }
+    translateViaGoogleApi()
     fetch(new Request("https://corsproxy.io/?https://demo.1778064.xyz/")).then(x=>{ return x.text()}).then(y=>{console.log("corsproxy==>>",y)})
 </script>
 
