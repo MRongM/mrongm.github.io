@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         codeBlock.appendChild(button);
 
         button.addEventListener('click', () => {
-            let codeToCopy = codeElement.innerText;
-            codeToCopy = codeToCopy.replace(/(\r\n|\n|\r)/g, '');
+            const codeToCopy = codeElement.innerText.trim();
+            // codeToCopy = codeToCopy.replace(/(\r\n|\n|\r)/g, '');
             navigator.clipboard.writeText(codeToCopy).then(() => {
                 button.innerText = 'Copied!';
                 setTimeout(() => {
