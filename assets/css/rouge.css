@@ -8,14 +8,6 @@
  .highlight {
     color: #24292e;
     background-color: #f4f4f4;
-    padding: 10px;
-    margin: 15px 0;
-    font-family: 'Consolas', 'Monaco', monospace;
-    font-size: 0.9em;
-    line-height: 1.5;
-    white-space: pre;
-    overflow: auto;
-    max-height: 400px;
   }
   .highlight .hll {
     background-color: #ffeaea;
