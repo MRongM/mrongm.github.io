@@ -1,7 +1,8 @@
 ---
 layout: default
-title: One-Line-Shell
 ---
+
+# One-Line-Shell
 
 # Check All K8S Status
 
