@@ -7,3 +7,8 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass      # Default directory where Sass partials are looked for
+  style: compressed    # Output style: compressed (minified) or expanded (readable)
+  # sourcemap: true    # Enable source maps for easier debugging in browser (optional)
