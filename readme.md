@@ -1,8 +1,8 @@
 # url
 
-- https://mrongm.github.io/md/shell
+- https://gh.328064.xyz/md/shell
 
-- https://mrongm.github.io/md/python
+- https://gh.328064.xyz/md/python
 
-# Jekyll
+# jekyll
 
