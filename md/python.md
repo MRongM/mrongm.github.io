@@ -58,7 +58,7 @@ pip list --format=freeze | grep -v '^\(pip\|setuptools\|wheel\)' | xargs pip uni
 
 ## Django Relative
 
-```py
+```python
 from rest_framework.test import APIClient
 from django.contrib.auth import get_user_model
 from django.urls import reverse

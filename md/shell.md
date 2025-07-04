@@ -6,7 +6,7 @@ layout: default
 
 ## Check All K8S Status
 
-```sh
+```shell
 echo "=========nodes" && kubectl get nodes -o wide --all-namespaces && echo "=========service" && kubectl get service -o wide --all-namespaces && echo "=========deploy" && kubectl get deploy -o wide --all-namespaces && echo "=========pods" && kubectl get pods -o wide --all-namespaces
 ```
 
