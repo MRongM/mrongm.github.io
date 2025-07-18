@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 # DCF的适用范围
 
