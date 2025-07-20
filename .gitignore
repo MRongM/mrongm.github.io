@@ -2,3 +2,8 @@ node_modules/
 dist/*
 .idea/
 package-lock.json
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
